@@ -13,11 +13,24 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from pages import views 
+from django.conf.urls import url, include
+from pages import views
 from django.contrib import admin
+from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+router = routers.DefaultRouter()
+router.register(r'results', views.RestaurantResultViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='home')
-]
+    url(r'^$', views.home, name='home'),
+    url(r'^restaurant/(?P<pk>\d+)$', views.restaurant, name='restaurant'),
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

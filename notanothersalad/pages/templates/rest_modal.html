@@ -1,0 +1,21 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <center><h4 class="modal-title">{{ rest.name }}</h4></center>
+    </div>
+    <div class="modal-body">
+        <center><img id="imageresource" src="http://localhost:8000/media/{{ img.image }}"
+                     style="width: 400px; height: 264px;"></center>
+        <div class="container">
+            <button onclick="location.href='{{ rest.menu }}';" id="myButton" class="float-left mybutton btn btn-lg">
+                Menu
+            </button>
+            <button onclick="location.href='https://postmates.com/por/{{ rest.name }}';" id="myButton"
+                    class="float-left mybutton btn btn-lg">Postmates
+            </button>
+
+
+            <p>{{ rest.description }}</p>
+        </div>
+    </div>
+</div>
