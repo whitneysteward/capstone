@@ -4,13 +4,17 @@
         <center><h4 class="modal-title">{{ rest.name }}</h4></center>
     </div>
     <div class="modal-body">
-        <center><img id="imageresource" src="http://localhost:8000/media/{{ img.image }}"
+        <center><img id="imageresource" src="http://api.notanothersalad.com/media/{{ img.image }}"
                      style="width: 400px; height: 264px;"></center>
         <div class="container">
+          {% if rest.menu == '0' %}
+          <span id="NoMenu"> No Menu Available!</span>
+           {% else %}
             <button onclick="location.href='{{ rest.menu }}';" id="myButton" class="float-left mybutton btn btn-lg">
                 Menu
             </button>
-            <button onclick="location.href='https://postmates.com/por/{{ rest.name }}';" id="myButton"
+            {% endif %}
+            <button onclick="location.href='https://postmates.com/search?lng=-122.6764816&lat=45.5230622&q={{ rest.name }}';" id="myButton"
                     class="float-left mybutton btn btn-lg">Postmates
             </button>
 

@@ -1,8 +1,16 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Restaurant
+from .models import Restaurant, Image
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ('image', 'description', 'name')
+
 
 class RestaurantSerializer(serializers.ModelSerializer):
+    images = ImageSerializer(many=True)
+
     class Meta:
         model = Restaurant
         fields = ('pk', 'name', 'address', 'phone', 'menu','images','description')

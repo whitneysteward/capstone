@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400);
+
+body{
+	background-color: black;
+	padding: 0;
+	margin:0;
+}
+
+.mybutton{
+	background-color:white;
+
+	border-style: outset;
+	font-size:20px;
+	color: black;
+	font-family: 'Yellowtail', cursive;
+}
+#NoMenu{
+	font-size:20px;
+	color: black;
+	font-family: 'Yellowtail', cursive;
+}
+
+.modal-backdrop {
+    position: relative !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}

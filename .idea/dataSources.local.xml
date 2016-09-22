@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - nas@localhost" uuid="9e52ad75-632d-4580-b76b-c88682024d0a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>nas</user-name>
+      <schema-pattern>nas.pg_catalog nas.public</schema-pattern>
+      <default-schemas>nas.public</default-schemas>
+    </data-source>
+  </component>
+</project>

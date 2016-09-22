@@ -1,0 +1,31 @@
+
+
+.text,.rc-anchor,  .g-recaptcha{
+   margin: 10px auto 0;
+  display: block;
+  width: 300px;
+  font-family: 'Bad Script', cursive; font-size:18px;}
+  .modal-title{ font-family:'Bad Script', cursive; font-size:30px;}
+.text-wrapper{
+  justify-content:space-between;
+  display:flex;
+font-family:'Bad Script', cursive;
+ font-size:18px;}
+
+ .text-wrapper input[type="submit"]{
+   border:solid 1px #ccc ;
+   color: #333;
+   background-color: #fff;
+   padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    border-radius: 4px;
+    height: 34px;
+    margin: 15px;
+ }

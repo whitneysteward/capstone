@@ -30,6 +30,8 @@ router.register(r'groups', views.GroupViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
+    url(r'^addrest/$', views.addrest, name='addrest'),
+    url(r'^locationresults/$', views.locationresults, name='locationresults'),
     url(r'^restaurant/(?P<pk>\d+)$', views.restaurant, name='restaurant'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
